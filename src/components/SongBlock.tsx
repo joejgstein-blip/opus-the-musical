@@ -10,11 +10,10 @@ interface Props {
 }
 
 function buildEmbedUrl(url: string) {
-  // Private SC tracks share as /s-TOKEN paths; the player needs ?secret_token=s-TOKEN
-  const m = url.match(/^(https:\/\/soundcloud\.com\/[^?]+?)\/s-([A-Za-z0-9]+)/);
-  const trackUrl = m ? `${m[1]}?secret_token=s-${m[2]}` : url;
-  const encoded = encodeURIComponent(trackUrl);
-  return `https://w.soundcloud.com/player/?url=${encoded}&color=%23c8a96e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false`;
+  // Google Drive file links (/file/d/<id>/view or /preview) -> preview embed
+  const m = url.match(/drive\.google\.com\/file\/d\/([^/]+)/);
+  if (m) return `https://drive.google.com/file/d/${m[1]}/preview`;
+  return url;
 }
 
 export default function SongBlock({ song, nextSectionId }: Props) {
@@ -63,18 +62,18 @@ export default function SongBlock({ song, nextSectionId }: Props) {
           <div className="song-body fade-in">
             {song.lyrics && <LyricsPanel lyrics={song.lyrics} />}
 
-            {song.soundcloudUrl ? (
-              <div className="soundcloud-embed">
+            {song.audioUrl ? (
+              <div className="audio-embed">
                 <iframe
                   width="100%"
                   height="120"
                   allow="autoplay"
-                  src={buildEmbedUrl(song.soundcloudUrl)}
+                  src={buildEmbedUrl(song.audioUrl)}
                   title={`${song.title} — audio player`}
                 />
               </div>
             ) : (
-              <div className="soundcloud-placeholder">
+              <div className="audio-placeholder">
                 Recording coming soon
               </div>
             )}

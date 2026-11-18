@@ -13,18 +13,9 @@ export interface SongSection {
   type: "song";
   title: string;
   act: 1 | 2;
-  soundcloudUrl: string | null;
+  audioUrl: string | null;
   lyrics: string | null;
   lyricsWip?: boolean;
-}
-
-const ALBUM_URL =
-  "https://soundcloud.com/user-885999480/sets/musical_demo/s-YmPI8omDIvl";
-
-// Embed the album positioned at a track index (0-based).
-// Replace individual soundcloudUrl values with direct track URLs once uploaded.
-function albumTrack(index: number) {
-  return `${ALBUM_URL}&start_track=${index}`;
 }
 
 export const show = {
@@ -54,7 +45,7 @@ export const show = {
       type: "song",
       act: 1,
       title: "Prologue",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/08_prologue_orchestra-8/s-Ku7EI8WQEPj?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=11f00ba7504442969d394f614c3c3273&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+      audioUrl: "https://drive.google.com/file/d/1kMFCBsd8Bl8gR-cvTgE0MoPgPBEPyjVT/preview",
       lyrics: null,
       lyricsWip: false,
     } satisfies SongSection,
@@ -84,7 +75,7 @@ End Scene as the music ends.`,
       type: "song",
       act: 1,
       title: "Hold the Line",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/02_hold_the_line-2/s-PqpjETGHdgw",
+      audioUrl: "https://drive.google.com/file/d/175YjD_XFyvP23ulteO8e9DPsuXOgpSpv/preview",
       lyrics: `[Verse 1]
 
 Who am I?
@@ -211,7 +202,7 @@ As the song progresses, the kids are excited during verse 2 and out of bed. Befo
       type: "song",
       act: 1,
       title: "Fly",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/03_fly-3/s-IGq1piV40Hh",
+      audioUrl: "https://drive.google.com/file/d/1oXS_pO8Yw0bSv077BGbJjxUekty7tfJQ/preview",
       lyrics: `[Verse 1]
 
 Take a breath,
@@ -323,7 +314,7 @@ The scene ends with Jon packing up his bag and heading home.`,
       type: "song",
       act: 1,
       title: "Bucket List",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/04_bucket_list-3/s-83ifpE0EHqg?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=082b57cf9a9941a8aba0a125cc2cdd18&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+      audioUrl: "https://drive.google.com/file/d/1wEM-oe35CQaqmrUsRrdRy9KKpWtU5Vw_/preview",
       lyrics: `[Verse 1]
 *(Coworkers)*
 
@@ -459,7 +450,7 @@ The song pulls in additional contributions from other students at the school, en
       type: "song",
       act: 1,
       title: "ABC",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/05_abc-5/s-yPeE4ogFSjr?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=b17b623ec1f742e6931bbd620f8cb2ad&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+      audioUrl: "https://drive.google.com/file/d/12SyzulcjwCEuyP57SulFWXmcRlbVPYKI/preview",
       lyrics: `[Verse 1]
 *(Teacher)*
 
@@ -572,7 +563,7 @@ The scene ends with them together, laughing.`,
       type: "song",
       act: 1,
       title: "In the City",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/06_in_the_city-4/s-tAzvCm0IkOM?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=af4fc47145ea48409ed0e4636b33aae5&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+      audioUrl: null,
       lyrics: `[Verse 1]
 
 It was long ago,
@@ -689,7 +680,7 @@ The scene ends with Jon singing the final line, sitting back down at the table w
       type: "song",
       act: 1,
       title: "Luckiest Man",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/07_luckiest_man-6/s-HcGvEgGp24a?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=d0f888fc19ce4116963b71a15f5eb94d&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+      audioUrl: "https://drive.google.com/file/d/1IYi1ZDlEhgoIcC-NSQYWVE3BpnCq-AMX/preview",
       lyrics: `[Verse]
 
 Happy birthday to me,
@@ -775,7 +766,7 @@ The scene ends with Sophie, sitting back down at Jon's place setting.`,
       type: "song",
       act: 1,
       title: "Lie",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/04_lie-4/s-c0WTvNKFFSC?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=933bdc1263604d0cb4f5ee25f0169104&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+      audioUrl: "https://drive.google.com/file/d/1S0RREQakO_3l_4ulSsYPYaj-dWPtfsmX/preview",
       lyrics: `[Verse]
 *(Sophie)*
 
@@ -895,7 +886,7 @@ As the song ends, the friends share a few more good-byes and then exit, leaving 
       type: "song",
       act: 1,
       title: "Winding Road",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/06_winding_road-6/s-mtWJhLn8fXa?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=9c506350dbb949e4ab0403d33d719d36&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+      audioUrl: "https://drive.google.com/file/d/1YAIW7Rjv-wbMym8x0drjSol_WeEFscOF/preview",
       lyrics: `[Verse 1]
 
 *(Mike)*
@@ -999,7 +990,7 @@ Jon and Sophie end the song hugging - they thank the teacher for the help and ex
       type: "song",
       act: 1,
       title: "Superman",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/010_superman-5/s-MVrXQbsRa5P?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=02fef5639d954b50a7989315fda7568c&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+      audioUrl: "https://drive.google.com/file/d/1Zu6xi66URMeJG13E9BT8J2QLiMUQ0vSS/preview",
       lyrics: `*(Sophie has been telling Jon he needs to rest. He keeps brushing it off. She pushes harder, more frustrated, until—)*
 
 *Jon snaps: "I KNOW what's happening to me!"*
@@ -1101,7 +1092,7 @@ The scene ends with Jon realizing that he's happy with it, grabbing his pen and 
       type: "song",
       act: 1,
       title: "Shine (Prelude)",
-      soundcloudUrl: albumTrack(10),
+      audioUrl: null,
       lyrics: null,
       lyricsWip: false,
     } satisfies SongSection,
@@ -1123,7 +1114,7 @@ Jon finishes his performance to a round of applause, and many of his family and 
       type: "song",
       act: 1,
       title: "Shine",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/07_shine-7/s-mwfSZm41hmV?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=cf6aa0c9293b4ce1817e7d9e8a5b6cb8&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+      audioUrl: "https://drive.google.com/file/d/1dvrgJCCmS27TWLTK9G9RhzaewUeKQNFi/preview",
       lyrics: `[Intro]
 
 Well, it might be the end.
@@ -1280,7 +1271,7 @@ An MC explains how the show works as a fundraiser in honor of Jon, and that they
       type: "song",
       act: 2,
       title: "For You",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/012_for_you-1/s-sXG074dS888?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=49e782e6f7d04e8bb5a94f60d4ee0a65&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+      audioUrl: "https://drive.google.com/file/d/1PD26bG_GUHZEEj65IQGxGrKKNs-6ea1R/preview",
       lyrics: `*(Jon, alone — not yet aware Sophie is listening)*
 
 Feels like the world is getting colder,
@@ -1353,7 +1344,7 @@ Once again, we return to focus and the background conversations resume. The last
       type: "song",
       act: 2,
       title: "Teacher Song",
-      soundcloudUrl: null,
+      audioUrl: null,
       lyrics: null,
       lyricsWip: true,
     } satisfies SongSection,
@@ -1375,7 +1366,7 @@ They end the song, of course, with a toast, and then disperse to go mingle a bit
       type: "song",
       act: 2,
       title: "Blue Skies",
-      soundcloudUrl: null,
+      audioUrl: null,
       lyrics: null,
       lyricsWip: true,
     } satisfies SongSection,
@@ -1399,7 +1390,7 @@ The scene ends with Jon kissing both kids on the head, and then walking out of t
       type: "song",
       act: 2,
       title: "Fly (Reprise)",
-      soundcloudUrl: albumTrack(13),
+      audioUrl: null,
       lyrics: null,
       lyricsWip: true,
     } satisfies SongSection,
@@ -1423,7 +1414,7 @@ As the song ends, we return the focus to the present and the crowd, and Sophie w
       type: "song",
       act: 2,
       title: "Home",
-      soundcloudUrl: "https://soundcloud.com/user-885999480/013_home-2/s-9gif1nV8nPH?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=4cc9659edcf740b6a518d64fe69f2621&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+      audioUrl: "https://drive.google.com/file/d/1ljvRv8predkwJ70rBywlhX6nQKH6keGP/preview",
       lyrics: `[Verse 1]
 *(Sophie's point of view)*
 
@@ -1541,7 +1532,7 @@ The speech ends, and music swells one final time as the family and friends gathe
       type: "song",
       act: 2,
       title: "Epilogue",
-      soundcloudUrl: null,
+      audioUrl: null,
       lyrics: null,
       lyricsWip: true,
     } satisfies SongSection,

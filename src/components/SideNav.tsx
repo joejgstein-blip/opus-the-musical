@@ -2,9 +2,6 @@
 import { useState, useEffect } from "react";
 import { show } from "@/data/show";
 
-const ALBUM_URL =
-  "https://soundcloud.com/user-885999480/sets/musical_demo/s-YmPI8omDIvl?si=86d7c0d246f44a538c3a5ee689cad777&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing";
-
 export default function SideNav() {
   const [activeId, setActiveId] = useState<string>("");
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -77,9 +74,6 @@ export default function SideNav() {
     <>
       <div className="side-nav-group">
         <span className="side-nav-heading">Songs</span>
-        <a href={ALBUM_URL} target="_blank" rel="noopener noreferrer" className="side-nav-album-link">
-          ♪ Full album ↗
-        </a>
         <div className="side-nav-track">
           {songs.map((song) => (
             <button

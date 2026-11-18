@@ -571,19 +571,19 @@ em {
   padding: 0.25rem 2rem 2rem;
 }
 
-.soundcloud-embed {
+.audio-embed {
   margin: 1.25rem 0 0;
   border-radius: var(--radius);
   overflow: hidden;
 }
 
-.soundcloud-embed iframe {
+.audio-embed iframe {
   display: block;
   width: 100%;
   border: none;
 }
 
-.soundcloud-placeholder {
+.audio-placeholder {
   background: var(--bg-raised);
   border: 1px dashed var(--border);
   border-radius: var(--radius);
